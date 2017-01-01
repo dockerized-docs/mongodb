@@ -17,4 +17,4 @@ RUN apt-get update \
 
 EXPOSE 80
 
-CMD service apache2 start 
+CMD rm -f /usr/local/apache2/logs/httpd.pid && apachectl -DFOREGROUND
